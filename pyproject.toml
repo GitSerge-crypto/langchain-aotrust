@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-aotrust"
+version = "0.1.0"
+description = "LangChain tools for AOTrust notarization — cryptographic proof-of-existence for AI agent outputs (x402, NEAR-anchored PDRs)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "A&O Trust Layer"}]
+dependencies = [
+    "langchain-core>=1.0",
+    "aotrust-protocol>=2.3.6",
+    "aiohttp>=3.9",
+]
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.pytest.ini_options]
+addopts = "-m 'not live'"
+markers = ["live: touches live API"]
+
+[tool.setuptools.packages.find]
+include = ["langchain_aotrust*"]
