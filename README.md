@@ -84,3 +84,9 @@ configure(base_url="https://api.aotrust.link")  # NO /v1 suffix — the SDK appe
 ## License
 
 MIT
+## Anchored release
+
+**This release is anchored:** [Shield ID `5558f228`](https://verify.aotrust.link/s/5558f228) - the published sdist
+of version `0.1.1` has a public first record in the AOTrust log (Ed25519-signed receipt, Merkle root
+committed hourly to NEAR). Verify it without trusting us, or check the whole log with the
+[exit kit](https://docs.aotrust.link/exit-kit.html).
