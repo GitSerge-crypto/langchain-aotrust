@@ -25,6 +25,8 @@ jobs:
       - name: Notarize sdist + wheel in AOTrust
         id: notarize
         uses: GitSerge-crypto/aotrust-skills/action@v1
+        env:
+          AO_TRUST_KEY: ${{ secrets.AO_TRUST_KEY }}
         with:
           files: 'dist/*'
       - name: Summary
